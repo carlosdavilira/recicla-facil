@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIn-wk-FHo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yoe-9g-wBj">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,20 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Olá!                                Antes de começar, precisamos saber o que voce geralmente recicla." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-vX-IGc">
-                                <rect key="frame" x="20" y="177" width="374" height="235"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcY-vX-IGc" secondAttribute="trailing" constant="20" id="GC6-lI-bhA"/>
-                            <constraint firstItem="hcY-vX-IGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OBz-h1-Poj"/>
-                            <constraint firstItem="hcY-vX-IGc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="mKH-oI-Nkg"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recicla Fácil" id="CLF-Sn-zJ8"/>
@@ -38,6 +25,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Mapa View Controller-->
+        <scene sceneID="PaI-iT-Uoa">
+            <objects>
+                <viewController id="yoe-9g-wBj" customClass="MapaViewController" customModule="Recicla_Facil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vjo-Kt-5nh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ahV-Kb-yeO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ahV-Kb-yeO" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" id="DS1-DD-qnC"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="ahV-Kb-yeO" secondAttribute="trailing" id="PZn-Wt-3R7"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="ahV-Kb-yeO" secondAttribute="bottom" id="SRj-1A-g9j"/>
+                            <constraint firstItem="ahV-Kb-yeO" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" id="a6a-4O-qRD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7gt-Jx-BvN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Her-pV-mKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S1P-Bs-TIv">
@@ -56,6 +69,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJW-cL-p6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+        <!--Recicla Fácil-->
+        <scene sceneID="B9j-Nx-Ynq">
+            <objects>
+                <viewController id="FdI-r8-xcF" customClass="InicioViewController" customModule="Recicla_Facil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8iA-fD-0nc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá!                                Antes de começarmos, precisamos saber o que voce geralmente recicla." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-QE-bxE">
+                                <rect key="frame" x="20" y="266" width="374" height="227"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WL-Wj-g9X">
+                                <rect key="frame" x="20" y="516" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Iniciar"/>
+                                <connections>
+                                    <action selector="IniciarFiltro:" destination="FdI-r8-xcF" eventType="touchUpInside" id="wET-dH-Wak"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3WL-Wj-g9X" firstAttribute="top" secondItem="8Pb-QE-bxE" secondAttribute="bottom" constant="23" id="3MO-Vp-Lj3"/>
+                            <constraint firstItem="cmu-7U-Ujd" firstAttribute="trailing" secondItem="3WL-Wj-g9X" secondAttribute="trailing" constant="20" id="FIY-pO-9Nt"/>
+                            <constraint firstItem="8Pb-QE-bxE" firstAttribute="leading" secondItem="cmu-7U-Ujd" secondAttribute="leading" constant="20" id="K7q-lZ-bzI"/>
+                            <constraint firstItem="cmu-7U-Ujd" firstAttribute="trailing" secondItem="8Pb-QE-bxE" secondAttribute="trailing" constant="20" id="ckI-9w-ruh"/>
+                            <constraint firstItem="8Pb-QE-bxE" firstAttribute="top" secondItem="cmu-7U-Ujd" secondAttribute="top" constant="222" id="fMy-Mw-4cO"/>
+                            <constraint firstItem="cmu-7U-Ujd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3WL-Wj-g9X" secondAttribute="bottom" constant="254" id="lQb-Cc-aBl"/>
+                            <constraint firstItem="3WL-Wj-g9X" firstAttribute="leading" secondItem="cmu-7U-Ujd" secondAttribute="leading" constant="20" id="qXQ-6p-kJ7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cmu-7U-Ujd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recicla Fácil" id="IOT-iV-cMg"/>
+                    <connections>
+                        <outlet property="labelInicio" destination="8Pb-QE-bxE" id="5p2-hb-cdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQ8-g3-wnM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2133" y="-505"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="AeX-C8-5on">
+            <objects>
+                <tableViewController id="fFU-Iv-nrm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ive-kW-MWX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que você recicla ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="43m-i0-0gu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ekw-8L-fjC">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ekw-8L-fjC" id="osr-TD-cIv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fFU-Iv-nrm" id="a7b-4e-n3L"/>
+                            <outlet property="delegate" destination="fFU-Iv-nrm" id="Hc6-ei-soO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eES-6O-Rfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3230" y="-506"/>
         </scene>
     </scenes>
 </document>

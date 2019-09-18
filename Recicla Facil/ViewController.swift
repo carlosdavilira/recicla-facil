@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+   //Esses dois dados vem da tela login
+    var login:String = "Exemplo"
+    var email:String = "exemplo@gmail.com"
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
