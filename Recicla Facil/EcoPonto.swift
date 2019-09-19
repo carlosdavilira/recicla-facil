@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EcoPonto: Codable {
+class EcoPonto: Decodable {
     var nome:String!
     var endereco:String!
     var bairro:String!
