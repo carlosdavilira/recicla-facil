@@ -1,0 +1,344 @@
+const express = require('express')
+const app = express()
+
+ecoPontos = 
+[
+    {
+      nome: 'Ecoponto Mondubim II',
+      endereco: 'Rua Mangaba, 170,Esquina com a Rua B',
+      bairro: 'MONDUBIM',
+      latitude: -3.8226478,
+      longitude: -38.5634409
+    },
+    {
+      nome: 'Ecoponto Damas',
+      endereco: 'Rua Júlio César, 1532 (Entre a Rua Macedo e a Rua Afrodísio Godim)',
+      bairro: 'DAMAS',
+      latitude: -3.7555436,
+      longitude: -38.5476395
+    },
+    {
+      nome: 'Ecoponto Guararapes',
+      endereco: 'Rua Paulo Roberto Pinheiro, 01,(Esquina com a Avenida Washington Soares)',
+      bairro: 'GUARARAPES',
+      latitude: -3.7579249,
+      longitude: -38.4888297
+    },
+    {
+      nome: 'Ecoponto Parangaba',
+      endereco: 'Alameda Oxóssi, 80, (Esquina com a Rua Topógrafo Sales)',
+      bairro: 'PARANGABA',
+      latitude: -3.7785947,
+      longitude: -38.5581637
+    },
+    {
+      nome: 'Ecoponto Jacarecanga',
+      endereco: 'Av. José Jatahy, 415,(Esquina com a Av. Sargento Hermínio)',
+      bairro: 'JACARECANGA',
+      latitude: -3.7248457,
+      longitude: -38.5458071
+    },
+    {
+      nome: 'Ecoponto Cristo Redentor',
+      endereco: 'Avenida Presidente Castelo Branco, 3836 (Av. Leste-Oeste, em frente ao nº 3833)',
+      bairro: 'CRISTO REDENTOR',
+      latitude: -3.708855,
+      longitude: -38.5665781
+    },
+    {
+      nome: 'Ecoponto Bonsucesso',
+      endereco: 'Rua Emílio de Menezes com a Rua Luzia Moreira',
+      bairro: 'BOM SUCESSO',
+      latitude: -3.780056,
+      longitude: -38.593209
+    },
+    {
+      nome: 'Ecoponto Francisco Baltazar de Sousa',
+      endereco: 'Rua André Chaves (esquina com Avenida Luciano Carneiro)',
+      bairro: 'PARREÃO',
+      latitude: -3.758762,
+      longitude: -38.534998
+    },
+    {
+      nome: 'Ecoponto Sapiranga II',
+      endereco: 'Rua Dr. Correia Lima (Rua Itamar Espíndola)',
+      bairro: 'EDSON QUEIROZ',
+      latitude: -3.791943,
+      longitude: -38.458841
+    },
+    {
+      nome: 'Ecoponto Cajazeiras',
+      endereco: 'Rua Francisco José de Albuquerque Pereira',
+      bairro: 'CAJAZEIRAS',
+      latitude: -3.811889,
+      longitude: -38.505296
+    },
+    {
+      nome: 'Ecoponto Autran Nunes',
+      endereco: 'Avenida Senador Fernandes Távora, 2938 (Esquina com a Rua Desembargador Felismino)',
+      bairro: 'AUTRAN NUNES',
+      latitude: -3.755051,
+      longitude: -38.598254
+    },
+    {
+      nome: 'Ecoponto Cocó',
+      endereco: 'Avenida Padre Antônio Tomás, 2669 (Em frente ao número 2656 (próximo à Via Expressa))',
+      bairro: 'COCÓ',
+      latitude: -3.743323,
+      longitude: -38.489129
+    },
+    {
+      nome: 'Ecoponto Sítio São João',
+      endereco: 'Rua Verde 42(Em frente ao número 287)',
+      bairro: 'JANGURUSSU',
+      latitude: -3.835472,
+      longitude: -38.511067
+    },
+    {
+      nome: 'Ecoponto Luciano Cavalcante',
+      endereco: 'Rua Jaime Leonel (Esquina com a Rua Monsenhor Carneiro da Cunha)',
+      bairro: 'ENGENHEIRO LUCIANO CAVALCANTE',
+      latitude: -3.773821,
+      longitude: -38.496760
+    },
+    {
+      nome: 'Ecoponto João XXIII',
+      endereco: 'Travessa Rio de Janeiro, 456',
+      bairro: 'JOÃO XXIII',
+      latitude: -3.769551,
+      longitude: -38.591771
+    },
+    {
+      nome: 'Ecoponto Paupina',
+      endereco: 'Rua Primeiro de Abril, 1198',
+      bairro: 'PAUPINA',
+      latitude: -3.868011,
+      longitude:  -38.493910
+    },
+    {
+      nome: 'Ecoponto Centro II',
+      endereco: 'Rua Guilherme Rocha, 1427',
+      bairro: 'CENTRO',
+      latitude: -3.723705,
+      longitude: -38.538403
+    },
+    {
+      nome: 'Ecoponto Álvaro Weyne',
+      endereco: 'Rua José Acioli, (Esquina com Avenida Tenente Lisboa)',
+      bairro: 'ÁLVARO WEYNE',
+      latitude: -3.726842,
+      longitude:  -38.574060
+    },
+    {
+      nome: 'Ecoponto Jovita Feitosa',
+      endereco: 'Rua General Figueiredo (Esquina com a Rua Cruz Saldanha)',
+      bairro: 'PARQUELÂNDIA',
+      latitude: -3.739894,
+      longitude: -38.553103
+    },
+    {
+      nome: 'Ecoponto Cartier',
+      endereco: 'Rua Quartzo (esquina com Rua Ônix)',
+      bairro: 'MONDUBIM',
+      latitude: -3.812058,
+      longitude: -38.558455
+    },
+    {
+      nome: 'Ecoponto Tancredo Neves',
+      endereco: 'Av. José Leon (Esquina com a Rua da Cachoeira)',
+      bairro: 'JARDIM DAS OLIVEIRAS',
+      latitude: -3.786672,
+      longitude: -38.508570
+    },
+    {
+      nome: 'Ecoponto Vila do Mar',
+      endereco: 'Rua Lídia Petri Gonçalves',
+      bairro: 'BARRA DO CEARÁ',
+      latitude: -3.695262,
+      longitude: -38.582049
+    },
+    {
+      nome:'Ecoponto Jóquei Clube',
+      endereco:'Rua Perdigão de Oliveira, 971 (Esquina com a Rua Silveira Filho)',
+      bairro:'JÓQUEI CLUBE',
+      latitude:-3.7747862,
+      longitude:-38.5781561
+  },
+  {
+      nome:'Ecoponto Pici',
+      endereco:'Rua Pernambuco, 600, Anexo à UFC (ao lado do número 600)',
+      bairro:'PICI',
+      latitude:-3.7576153,
+      longitude:-38.5719899
+  },
+  {
+      nome:'Ecoponto Granja Portugal',
+      endereco:'Rua Duas Nações, 1029',
+      bairro:'GRANJA PORTUGAL',
+      latitude:-3.7807081,
+      longitude:-38.6030413
+  },
+  {
+      nome:'Ecoponto Parque Dois Irmãos',
+      endereco:'Rua H (Esquina com a rua K)',
+      bairro:'PARQUE DOIS IRMÃOS',
+      latitude:-3.7738898,
+      longitude:-38.5650075
+  },
+  {
+      nome:'Ecoponto Jardim Cearense',
+      endereco:'Rua Holanda, 1538 (Esquina com a Rua Cel. Jaime Rolemberg)',
+      bairro:'JARDIM CEARENSE',
+      latitude:-3.8013372,
+      longitude:-38.5607106
+  },
+  {
+      nome:'Ecoponto Carlito Pamplona',
+      endereco:'Avenida Francisco Sá (Esquina com Rua Dom Hélio Campos)',
+      bairro:'CARLITO PAMPLONA',
+      latitude:-3.7180117,
+      longitude:-38.5556302
+  },
+  {
+      nome:'Ecoponto José Walter',
+      endereco:'Avenida B (Esquina com Rua 33)',
+      bairro:'CONJUNTO CEARÁ',
+      latitude:-3.7672744,
+      longitude:-38.6066226
+  },
+  {
+      nome:'Ecoponto Messejana',
+      endereco:'Rua Nicolau Coelho (Esquina com Av. 24 de Novembro - próximo à Areninha)',
+      bairro:'MESSEJANA',
+      latitude:-3.821199,
+      longitude:-38.492215
+  },
+  {
+      nome:'Ecoponto Aracapé',
+      endereco:'Rua Miguel de Aragão, 754 (Esquina com a Rua Nossa Senhora Aparecida)',
+      bairro:'ARACAPÉ',
+      latitude:-3.833589,
+      longitude:-38.586342
+  },
+  {
+      nome:'Ecoponto Dias Macedo',
+      endereco:'Rua Marechal Bittencourt, 199 (Esquina com Rua Capitão João Ferreira Lima)',
+      bairro:'DIAS MACÊDO',
+      latitude:-3.785609,
+      longitude:-38.528204
+  },
+  {
+      nome:'Ecoponto Sapiranga',
+      endereco:'Avenida Edilson Brasil Soares, 1220 (Esquina com Rua Bill Cartaxo)',
+      bairro:'SAPIRANGA',
+      latitude:-3.789012,
+      longitude:-38.474499
+  },
+  {
+      nome:'Ecoponto São Bento',
+      endereco:'Travessa José Teixeira Costa (Esquina com Rua São Benedito)',
+      bairro:'SÃO BENTO',
+      latitude:-3.847050,
+      longitude:-38.480479
+  },
+  {
+      nome:'Ecoponto Conjunto Ceará II',
+      endereco:'Avenida C, 1890 (Esquina com Rua 1001 - Etapa IV do Conjunto Ceará)',
+      bairro:'CONJUNTO CEARÁ II',
+      latitude:-3.773399,
+      longitude:-38.615910
+  },
+  {
+      nome:'Ecoponto Conjunto Ceará I',
+      endereco:'Rua 442, 159 (Esquina com Rua 432 - Etapa II do Conjunto Ceará)',
+      bairro:'CONJUNTO CEARÁ I',
+      latitude:-3.762766,
+      longitude:-38.604754
+  },
+  {
+      nome:'Ecoponto Pirambu',
+      endereco:'Rua Costa Matos, 5 (Esquina com Rua Jacinto de Matos, ao lado do Posto)',
+      bairro:'PIRAMBU',
+      latitude:-3.713527,
+      longitude:-38.545624
+  },
+  {
+      nome:'Ecoponto Centro',
+      endereco:'Avenida Alberto Nepomuceno, 144 (Esquina com Travessa Icó)',
+      bairro:'CENTRO',
+      latitude:-3.722086,
+      longitude:-38.523778
+  },
+  {
+      nome:'Ecoponto Leste-Oeste',
+      endereco:'Av. Leste-Oeste, 2973 (Anexo à Escola Municipal Hilberto Silva)',
+      bairro:'PIRAMBU',
+      latitude:-3.712036,
+      longitude:-38.555278
+  },
+  {
+      nome:'Ecoponto Pirambu II',
+      endereco:'Rua Nossa Senhora das Graças, 505 (Esquina com a Rua Santa Rosa)',
+      bairro:'PIRAMBU',
+      latitude:-3.710333,
+      longitude:-38.552934
+  },
+  {
+      nome:'Ecoponto Mondubim',
+      endereco:'Rua Carlos Pimenta, 507 (Esquina com a Rua Coronel Tibúrcio)',
+      bairro:'MONDUBIM',
+      latitude:-3.822747,
+      longitude:-38.563401
+  },
+  
+  {nome: 'Ecoponto vila velha', endereco :'Rua Jasmim, 0, por tras do liceu vila velha ', bairro: 'vila velha', latitude: -3.7818831, longitude: -38.5016424},
+
+  {nome: 'Ecoponto sao joao do tauape', endereco:' Av. Visconde do Rio Branco, 3485,', bairro: 'Joaquim tavora', latitude: -3.7515811,longitude : -38.5207439 },
+  
+  {nome: 'Ecoponto Varjota', endereco:' Av. Antônio Justa , 4188', bairro:'Meireles',  latitude: -3.7311133 , longitude:-38.4839477} ,
+  
+  {nome:'Ecoponto vila peri', endereco:'R. Giselda Cysne, 92, ', bairro: 'Coco' , latitude: -3.7522281, longitude: -38.473565},
+  
+  {nome:'Ecoponto Vila Peri', endereco:'R. Antonio Costa Mendes, 468', bairro:'Vila Peri', latitude: -3.7902056, longitude: -38.58415},
+  
+  {nome:'Ecoponto Bairro de Fatima', endereco:' Av. Eduardo Girao, 989', bairro:'Benfica', latitude: -3.746385, longitude: -38.544029},
+  
+  {nome:'Ecoponto Barra do Ceará', endereco:'Av. Graça aranha, 300', bairro:'Barra do Ceará', latitude: -3.7121426, longitude: -38.5745529},
+  
+  {nome:'Ecoponto Serrinha', endereco:'Av. Inacio parente ,70', bairro:'Serrinha', latitude: -3.782528, longitude: -38.542546},
+  
+  {nome: 'Ecoponto Conjunto Esperança', endereco:'Av penetração sul ,472', bairro: 'Conjunto esperaça', latitude: -3.813757, longitude: -38.592617},
+  
+  {nome: 'Ecoponto Conjunto Ceara', endereco: 'Av ministro Albuquerque lima 1150', bairro : 'conjunto ceara', latitude: -3.771121, longitude : -38.602336},
+  
+  {nome:'Ecoponto Edson Queiroz', endereco:'hill de Moraes 397', bairro:'Edson Queiroz', latitude : -3.775216, longitude : -38.475644},
+  
+  {nome:'Ecoponto cdade dos funcionarios',endereco: ' Dr jose Plutarco, 24', bairro:'Cidade dos funcionários', latitude : -3.789802, longitude: -38.491545},
+  
+  {nome:'Ecoponto Jangurussu ',endereco:'Av castelo de castro 1207', bairro: 'Jangurussu', latitude : -3.840273, longitude : -38.521573},
+  
+  {nome:'Ecoponto verdes mares', endereco:' Julio Azevedo 688', bairro:'Papicu' ,latitude : -3.736867, longitude : -38.478559},
+  
+  {nome:'Ecoponto Antonio Bezerra', endereco: 'Dr joao Guilherme 373', bairro:'Antonio Bezerra', latitude: -3.737245, longitude: -38.588380},
+  
+  {nome: 'Ecoponto cidade jardim II' , endereco: 'rua  16 quadra: 8', bairro: 'jose Walter' ,latitude: -3.822548 , longitude:-38.563426},
+  
+  {nome:'Ecoponto aerolandia', endereco: 'tenete roma x ', bairro:'aerolandia', latitude: -3.767449, longitude : -38.513312},
+  
+  {nome:'Ecoponto bairro Ellery' , endereco:'Gonçalo lago esquina com rua catarina laboure' , bairro:'vila ellery', latitude: -3.724466 , longitude: -38.546006},
+  
+  {nome:'Ecoponto praia do futuro' , endereco: 'rua jose aurelio câmara,83 ', bairro:'praia do futuro', latitude: -3.730476, longitude:-38.459360},
+  
+  {nome:'Ecoponto Vicente pizon', endereco:'Rua Veneza 131', bairro:'Vicente pizon', latitude: -3.728313, longitude: -38.472217 }
+  
+
+]
+  
+
+let getEcoPontos = (res) => {
+    res.send(ecoPontos)
+  }
+
+ module.exports = {
+    getEcoPontos
+}
