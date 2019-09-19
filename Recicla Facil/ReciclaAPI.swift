@@ -25,7 +25,8 @@ class ReciclaAPI {
                         
                         let ecoPontos = try jsonDecoder.decode([EcoPonto].self, from: dadosRetorno)
                         listaEcoPontosRetorno = ecoPontos
-                        
+                        print(ecoPontos)
+                        JSONEncoder().en
                         completionHandler(listaEcoPontosRetorno)
                         
 //                        let listaEcoPontos = try JSONSerialization.jsonObject(with: dados!, options: []) as! [[String:Any]]

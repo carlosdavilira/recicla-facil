@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EcoPonto: Decodable {
+class EcoPonto: Codable {
     var nome:String!
     var endereco:String!
     var bairro:String!
@@ -22,7 +22,6 @@ class EcoPonto: Decodable {
         self.endereco = endereco
         self.bairro = bairro
         self.latitude = latitude
-        self.longitude = longitude
     }
     
 }
