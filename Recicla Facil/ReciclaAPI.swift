@@ -12,7 +12,7 @@ class ReciclaAPI {
     
     init(){}
     
-    func request() -> [EcoPonto]{
+    func request(_ completionHandler: @escaping ([EcoPonto]) -> Void ) -> [EcoPonto]{
         var listaEcoPontosRetorno:[EcoPonto] = []
         if let url = URL(string: "http://mism12.kinghost.net:21001/getEcoPontos"){
             let tarefa = URLSession.shared.dataTask(with: url) {
@@ -21,20 +21,26 @@ class ReciclaAPI {
                  if let dadosRetorno = dados
                  {
                     do {
+                        let jsonDecoder = JSONDecoder()
                         
-                        let listaEcoPontos = try JSONSerialization.jsonObject(with: dados!, options: []) as! [[String:Any]]
+                        let ecoPontos = try jsonDecoder.decode([EcoPonto].self, from: dadosRetorno)
+                        listaEcoPontosRetorno = ecoPontos
                         
+                        completionHandler(listaEcoPontosRetorno)
                         
-                        for unidade in listaEcoPontos {
-                            let  econPonto = EcoPonto.init(nome: unidade["nome"] as! String,
-                                endereco: unidade["endereco"] as! String,
-                                bairro: unidade["bairro"] as! String,
-                                latitude: unidade["latitude"] as! Double,
-                                longitude: unidade["longitude"] as! Double
-                            )
-                            listaEcoPontosRetorno.append(econPonto)
-                        }
+//                        let listaEcoPontos = try JSONSerialization.jsonObject(with: dados!, options: []) as! [[String:Any]]
+//
+//                        for unidade in listaEcoPontos {
+//                            let  econPonto = EcoPonto.init(nome: unidade["nome"] as! String,
+//                                endereco: unidade["endereco"] as! String,
+//                                bairro: unidade["bairro"] as! String,
+//                                latitude: unidade["latitude"] as! Double,
+//                                longitude: unidade["longitude"] as! Double
+//                            )
+//                            listaEcoPontosRetorno.append(econPonto)
+//                        }
                        
+                        
                       //  guard let nomePonto = listaEcoPontos[0]["endereco"] as? String else { return }
                         //print(nomePonto)
                     } catch{

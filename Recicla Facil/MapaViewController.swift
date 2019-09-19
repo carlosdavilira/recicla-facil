@@ -14,6 +14,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @IBOutlet weak var mapa: MKMapView!
     var gerenciadorLocal = CLLocationManager()
+    var ecoPontos:[EcoPonto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,14 +52,17 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         anotacao.subtitle = "Esquina com a Rua B"
         mapa.addAnnotation(anotacao)*/
         
-      /*  var ecoPontos:[EcoPonto] = []
+     /*   var ecoPontos:[EcoPonto] = []
         ecoPontos.append(EcoPonto.init(nome: "Ecoponto Mondubim II",endereco: "Rua Mangaba, 170,Esquina com a Rua B",bairro:"MONDUBIM",latitude:-3.8226478,longitude: -38.5634409))
         ecoPontos.append(EcoPonto.init(nome: "Ecoponto Damas",endereco: "Rua Júlio César, 1532 (Entre a Rua Macedo e a Rua Afrodísio Godim)",bairro:"DAMAS",latitude:-3.7555436,longitude: -38.5476395))*/
         var reciclaApi = ReciclaAPI.init()
-        var ecoPontos:[EcoPonto] = reciclaApi.request()
+        reciclaApi.request { (pontos) in
+             self.ecoPontos = pontos
+             self.plotarPontosMapa(listaEcopontos: pontos)
+        }
         
         //TODO Ecopontos ainda nao plotam corretamente. necessario ver se o array esta sendo preenchido corretamente
-        plotarPontosMapa(listaEcopontos: ecoPontos)
+       
       
         
     }
