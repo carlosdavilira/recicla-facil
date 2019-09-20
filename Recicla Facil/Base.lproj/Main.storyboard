@@ -13,32 +13,38 @@
         <!--Recicla Fácil-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <exit id="beZ-ha-755" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="loginId" id="BYZ-38-t0r" customClass="ViewController" customModule="Recicla_Facil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome de Usuaário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My4-LZ-tWr">
-                                <rect key="frame" x="10" y="426" width="394" height="30"/>
+                                <rect key="frame" x="40" y="426" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-xh-OE0">
-                                <rect key="frame" x="10" y="464" width="394" height="30"/>
+                                <rect key="frame" x="40" y="464" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-ot-WU0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Desenho" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-ot-WU0">
                                 <rect key="frame" x="87" y="179" width="240" height="188"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-1c-ccY">
-                                <rect key="frame" x="139" y="535" width="136" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Logar"/>
+                                <rect key="frame" x="87" y="535" width="240" height="48"/>
+                                <color key="backgroundColor" red="0.68786698579788208" green="0.81436449289321899" blue="0.20651194453239441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Logar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ComTutorial:" destination="beZ-ha-755" eventType="touchUpInside" id="GEZ-rf-lME"/>
                                     <action selector="ComTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoJ-3g-fvq"/>
@@ -47,17 +53,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="q2x-1c-ccY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="2AR-Uf-XgH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="My4-LZ-tWr" secondAttribute="trailing" constant="10" id="82s-2N-cht"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3Z-xh-OE0" secondAttribute="trailing" constant="10" id="BAH-OP-7zZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="My4-LZ-tWr" secondAttribute="trailing" constant="40" id="82s-2N-cht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3Z-xh-OE0" secondAttribute="trailing" constant="40" id="BAH-OP-7zZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVe-ot-WU0" secondAttribute="trailing" constant="87" id="CDj-zp-phK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q2x-1c-ccY" secondAttribute="bottom" constant="279" id="CT2-ah-k4z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q2x-1c-ccY" secondAttribute="trailing" constant="139" id="JkJ-a0-ToA"/>
                             <constraint firstItem="My4-LZ-tWr" firstAttribute="top" secondItem="SVe-ot-WU0" secondAttribute="bottom" constant="59" id="Ovi-Ok-jlJ"/>
-                            <constraint firstItem="My4-LZ-tWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WbE-J6-bfX"/>
+                            <constraint firstItem="My4-LZ-tWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="WbE-J6-bfX"/>
                             <constraint firstItem="O3Z-xh-OE0" firstAttribute="top" secondItem="My4-LZ-tWr" secondAttribute="bottom" constant="8" id="X6g-Bx-lcF"/>
+                            <constraint firstItem="q2x-1c-ccY" firstAttribute="leading" secondItem="SVe-ot-WU0" secondAttribute="leading" id="dWm-yo-2OT"/>
                             <constraint firstItem="q2x-1c-ccY" firstAttribute="top" secondItem="O3Z-xh-OE0" secondAttribute="bottom" constant="41" id="fmS-NJ-L6N"/>
-                            <constraint firstItem="O3Z-xh-OE0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iQJ-3m-n7j"/>
+                            <constraint firstItem="q2x-1c-ccY" firstAttribute="width" secondItem="SVe-ot-WU0" secondAttribute="width" id="iLe-M2-jFI"/>
+                            <constraint firstItem="O3Z-xh-OE0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="iQJ-3m-n7j"/>
                             <constraint firstItem="SVe-ot-WU0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="pqD-Of-5k7"/>
                             <constraint firstItem="SVe-ot-WU0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ym7-Ol-mi3"/>
                         </constraints>
@@ -71,6 +77,8 @@
                         <segue destination="yoe-9g-wBj" kind="show" identifier="semTutorial" id="NWi-Qo-xN2"/>
                     </connections>
                 </viewController>
+                <exit id="beZ-ha-755" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
@@ -202,4 +210,7 @@
             <point key="canvasLocation" x="3230" y="-506"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Desenho" width="320" height="240"/>
+    </resources>
 </document>

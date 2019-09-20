@@ -22,10 +22,10 @@ class ViewController: UIViewController {
     @IBAction func ComTutorial(_ sender: Any) {
         
         
-        if(labelLogin.text == "registrado@exemplo.com"){
+        if(labelLogin.text == "registrado"){
               performSegue(withIdentifier: "semTutorial", sender: nil)
         }
-        else if(labelLogin.text == "naoregistrado@exemplo.com"){
+        else if(labelLogin.text == "naoregistrado"){
               performSegue(withIdentifier: "comTutorial", sender: nil)
         }
         
