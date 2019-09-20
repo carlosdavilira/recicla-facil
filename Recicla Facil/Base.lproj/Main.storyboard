@@ -18,24 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome de Usuaário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My4-LZ-tWr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome de Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My4-LZ-tWr">
                                 <rect key="frame" x="40" y="426" width="334" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-xh-OE0">
                                 <rect key="frame" x="40" y="464" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Desenho" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-ot-WU0">
-                                <rect key="frame" x="87" y="179" width="240" height="188"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Desenho" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-ot-WU0">
+                                <rect key="frame" x="87" y="179" width="240" height="207"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-1c-ccY">
                                 <rect key="frame" x="87" y="535" width="240" height="48"/>
-                                <color key="backgroundColor" red="0.68786698579788208" green="0.81436449289321899" blue="0.20651194453239441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.54692989587783813" green="0.65630310773849487" blue="0.16841185092926025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Logar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3Z-xh-OE0" secondAttribute="trailing" constant="40" id="BAH-OP-7zZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVe-ot-WU0" secondAttribute="trailing" constant="87" id="CDj-zp-phK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q2x-1c-ccY" secondAttribute="bottom" constant="279" id="CT2-ah-k4z"/>
-                            <constraint firstItem="My4-LZ-tWr" firstAttribute="top" secondItem="SVe-ot-WU0" secondAttribute="bottom" constant="59" id="Ovi-Ok-jlJ"/>
+                            <constraint firstItem="My4-LZ-tWr" firstAttribute="top" secondItem="SVe-ot-WU0" secondAttribute="bottom" constant="40" id="Ovi-Ok-jlJ"/>
                             <constraint firstItem="My4-LZ-tWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="WbE-J6-bfX"/>
                             <constraint firstItem="O3Z-xh-OE0" firstAttribute="top" secondItem="My4-LZ-tWr" secondAttribute="bottom" constant="8" id="X6g-Bx-lcF"/>
                             <constraint firstItem="q2x-1c-ccY" firstAttribute="leading" secondItem="SVe-ot-WU0" secondAttribute="leading" id="dWm-yo-2OT"/>

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBAction func ComTutorial(_ sender: Any) {
         
+        // -3.738000, -38.519733
         
         if(labelLogin.text == "registrado"){
               performSegue(withIdentifier: "semTutorial", sender: nil)
