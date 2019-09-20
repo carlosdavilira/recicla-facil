@@ -12,8 +12,27 @@ class ViewController: UIViewController {
    //Esses dois dados vem da tela login
     var login:String = "Exemplo"
     var email:String = "exemplo@gmail.com"
+    var window: UIWindow?
+    var acesso = Acesso.init()
     
-
+    @IBOutlet weak var labelLogin: UITextField!
+    @IBOutlet weak var labelSenha: UITextField!
+    
+    
+    @IBAction func ComTutorial(_ sender: Any) {
+        
+        
+        if(labelLogin.text == "registrado@exemplo.com"){
+              performSegue(withIdentifier: "semTutorial", sender: nil)
+        }
+        else if(labelLogin.text == "naoregistrado@exemplo.com"){
+              performSegue(withIdentifier: "comTutorial", sender: nil)
+        }
+        
+    }
+    
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +40,10 @@ class ViewController: UIViewController {
         //text
         //test Rejane -
         //Marcelo
+        
+      
+        
     }
-
 
 }
 

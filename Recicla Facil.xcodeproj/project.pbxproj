@@ -13,6 +13,7 @@
 		5789F27B2332A8DF0016FC56 /* EcoPonto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789F27A2332A8DF0016FC56 /* EcoPonto.swift */; };
 		5789F27E2332AE1F0016FC56 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5789F27D2332AE1F0016FC56 /* CoreLocation.framework */; };
 		5789F2802332BB6F0016FC56 /* ReciclaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789F27F2332BB6F0016FC56 /* ReciclaAPI.swift */; };
+		5789F28723353EE80016FC56 /* Acesso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789F28623353EE80016FC56 /* Acesso.swift */; };
 		57B81AF9232984B100C4EBB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B81AF8232984B100C4EBB9 /* AppDelegate.swift */; };
 		57B81AFB232984B100C4EBB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B81AFA232984B100C4EBB9 /* ViewController.swift */; };
 		57B81AFE232984B100C4EBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B81AFC232984B100C4EBB9 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		5789F27D2332AE1F0016FC56 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5789F27F2332BB6F0016FC56 /* ReciclaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciclaAPI.swift; sourceTree = "<group>"; };
 		5789F28523340A9C0016FC56 /* reciclaFacil.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reciclaFacil.json; sourceTree = "<group>"; };
+		5789F28623353EE80016FC56 /* Acesso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acesso.swift; sourceTree = "<group>"; };
 		57B81AF5232984B100C4EBB9 /* Recicla Facil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recicla Facil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B81AF8232984B100C4EBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B81AFA232984B100C4EBB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				57B81AFF232984B100C4EBB9 /* Recicla_Facil.xcdatamodeld */,
 				5789F27823329ED10016FC56 /* MapaViewController.swift */,
 				5789F27F2332BB6F0016FC56 /* ReciclaAPI.swift */,
+				5789F28623353EE80016FC56 /* Acesso.swift */,
 			);
 			path = "Recicla Facil";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				5789F27923329ED10016FC56 /* MapaViewController.swift in Sources */,
 				57B81AFB232984B100C4EBB9 /* ViewController.swift in Sources */,
 				57B81B01232984B100C4EBB9 /* Recicla_Facil.xcdatamodeld in Sources */,
+				5789F28723353EE80016FC56 /* Acesso.swift in Sources */,
 				5789F27723317F080016FC56 /* InicioViewController.swift in Sources */,
 				57B81AF9232984B100C4EBB9 /* AppDelegate.swift in Sources */,
 			);
