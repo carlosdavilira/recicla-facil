@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1MX-gz-aQY">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,6 +81,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Instrucoes View Controller-->
+        <scene sceneID="w2e-fV-V8J">
+            <objects>
+                <viewController id="1MX-gz-aQY" customClass="InstrucoesViewController" customModule="Recicla_Facil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HSd-NI-srH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byR-u5-Vgt" userLabel="Pular">
+                                <rect key="frame" x="114" y="779" width="186" height="42"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.87058823529411766" blue="0.71764705882352942" alpha="0.9532855308219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Pular ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-qj-Qgz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="640"/>
+                            </scrollView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-JB-0Rb">
+                                <rect key="frame" x="188" y="704" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.42352941176470588" green="0.87058823529411766" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.25612443689999997" green="0.20411279800000001" blue="0.1785344183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UJz-RV-n1z" firstAttribute="bottom" secondItem="byR-u5-Vgt" secondAttribute="bottom" constant="41" id="4TB-8a-CiY"/>
+                            <constraint firstItem="UJz-RV-n1z" firstAttribute="trailing" secondItem="XFj-qj-Qgz" secondAttribute="trailing" id="NBi-ef-Cvx"/>
+                            <constraint firstItem="6eV-JB-0Rb" firstAttribute="leading" secondItem="UJz-RV-n1z" secondAttribute="leading" constant="188" id="aHT-ND-55C"/>
+                            <constraint firstItem="XFj-qj-Qgz" firstAttribute="leading" secondItem="UJz-RV-n1z" secondAttribute="leading" id="cbo-0O-VpR"/>
+                            <constraint firstItem="6eV-JB-0Rb" firstAttribute="top" secondItem="XFj-qj-Qgz" secondAttribute="bottom" constant="20" id="kgY-du-Afo"/>
+                            <constraint firstItem="byR-u5-Vgt" firstAttribute="leading" secondItem="UJz-RV-n1z" secondAttribute="leading" constant="114" id="owS-za-gNG"/>
+                            <constraint firstItem="UJz-RV-n1z" firstAttribute="trailing" secondItem="6eV-JB-0Rb" secondAttribute="trailing" constant="187" id="ttd-t5-EIo"/>
+                            <constraint firstItem="UJz-RV-n1z" firstAttribute="trailing" secondItem="byR-u5-Vgt" secondAttribute="trailing" constant="114" id="u2h-VY-8d2"/>
+                            <constraint firstItem="XFj-qj-Qgz" firstAttribute="top" secondItem="UJz-RV-n1z" secondAttribute="top" id="ua3-Kh-X79"/>
+                            <constraint firstItem="byR-u5-Vgt" firstAttribute="top" secondItem="6eV-JB-0Rb" secondAttribute="bottom" constant="38" id="vnD-tE-J0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UJz-RV-n1z"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="6eV-JB-0Rb" id="zwl-PL-gy9"/>
+                        <outlet property="scrollView" destination="XFj-qj-Qgz" id="u3i-tQ-a3x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eP-7w-nRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046.376811594203" y="856.47321428571422"/>
         </scene>
         <!--Mapa View Controller-->
         <scene sceneID="PaI-iT-Uoa">
