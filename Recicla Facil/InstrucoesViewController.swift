@@ -9,7 +9,7 @@
 import UIKit
 
 class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
-  var slides:[Slide] = [];
+    var slides:[Slide] = [];
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
