@@ -31,7 +31,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     func createSlides() -> [Slide] {
         
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.imageView.image = UIImage(named: "enviroment")
+        slide1.imageView.image = UIImage(named: "delivery")
         slide1.labelTitulo.text = "A real-life bear"
         slide1.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
@@ -41,18 +41,18 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
         slide2.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.imageView.image = UIImage(named: "hamburguer")
+        slide3.imageView.image = UIImage(named: "winners")
         slide3.labelTitulo.text = "A real-life bear"
         slide3.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide4.imageView.image = UIImage(named: "winners")
+        slide4.imageView.image = UIImage(named: "points")
         slide4.labelTitulo.text = "A real-life bear"
         slide4.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide5.imageView.image = UIImage(named: "ic_onboarding_5")
+        slide5.imageView.image = UIImage(named: "celebration2")
         slide5.labelTitulo.text = "A real-life bear"
         slide5.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
@@ -60,6 +60,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     }
     
     func setupSlideScrollView(slides : [Slide]) {
+        
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: scrollView.frame.height)
         scrollView.isPagingEnabled = true
         

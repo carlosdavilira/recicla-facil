@@ -18,21 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Desenho" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-Lg-d9T">
-                                <rect key="frame" x="47" y="328" width="320" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="direction3" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-Lg-d9T">
+                                <rect key="frame" x="47" y="294" width="320" height="308"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recicla Fácil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwQ-K8-16R">
-                                <rect key="frame" x="102" y="576" width="197" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recicla Fácil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwQ-K8-16R">
+                                <rect key="frame" x="109" y="627" width="197" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" red="0.45019841194152832" green="0.63248306512832642" blue="0.23755532503128052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.21993666887283325" green="0.8280060887336731" blue="0.62322348356246948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ela-Lg-d9T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1xn-6W-20P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FwQ-K8-16R" secondAttribute="trailing" constant="108" id="2N3-9K-7wW"/>
+                            <constraint firstItem="Ela-Lg-d9T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="5pH-pR-kTU"/>
+                            <constraint firstItem="Ela-Lg-d9T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Hva-ZL-tXG"/>
+                            <constraint firstItem="FwQ-K8-16R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="Qu0-4a-4hx"/>
                             <constraint firstItem="Ela-Lg-d9T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fbb-sQ-ctn"/>
+                            <constraint firstItem="FwQ-K8-16R" firstAttribute="top" secondItem="Ela-Lg-d9T" secondAttribute="bottom" constant="25" id="iaB-W2-aOg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ela-Lg-d9T" secondAttribute="trailing" constant="47" id="o2E-y1-4kZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="FwQ-K8-16R" secondAttribute="bottom" constant="190" id="oJR-zo-dQQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Desenho" width="320" height="240"/>
+        <image name="direction3" width="1286" height="890"/>
     </resources>
 </document>
