@@ -22,17 +22,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outro texto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-Ty-DgZ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outro texto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-Ty-DgZ">
                     <rect key="frame" x="20" y="821.5" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-db-iNf">
-                    <rect key="frame" x="20" y="124" width="374" height="469"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="469" id="6KL-YS-hd5"/>
-                    </constraints>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-db-iNf">
+                    <rect key="frame" x="20" y="124" width="374" height="637"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,11 +37,11 @@
                 <constraint firstItem="HpN-Ty-DgZ" firstAttribute="top" secondItem="BSd-Sx-tp2" secondAttribute="bottom" constant="20" id="1bG-tg-s5b"/>
                 <constraint firstItem="ss5-db-iNf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="80" id="6sY-Lk-SXs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BSd-Sx-tp2" secondAttribute="trailing" constant="20" id="9Ra-Cx-unp"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HpN-Ty-DgZ" secondAttribute="bottom" priority="750" constant="20" id="EE5-qU-V7l"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HpN-Ty-DgZ" secondAttribute="bottom" constant="20" id="EE5-qU-V7l"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HpN-Ty-DgZ" secondAttribute="trailing" constant="20" id="J75-lJ-cyE"/>
                 <constraint firstItem="ss5-db-iNf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Qmw-hh-Nvo"/>
                 <constraint firstItem="BSd-Sx-tp2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bGh-vT-0HR"/>
-                <constraint firstItem="BSd-Sx-tp2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ss5-db-iNf" secondAttribute="bottom" priority="750" constant="20" id="cTo-JN-a9N"/>
+                <constraint firstItem="BSd-Sx-tp2" firstAttribute="top" secondItem="ss5-db-iNf" secondAttribute="bottom" constant="20" id="cTo-JN-a9N"/>
                 <constraint firstItem="HpN-Ty-DgZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="kIb-yE-9fl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ss5-db-iNf" secondAttribute="trailing" constant="20" id="sRT-V8-0ME"/>
             </constraints>

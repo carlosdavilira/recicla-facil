@@ -14,8 +14,20 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBAction func ChamarSkip(_ sender: Any) {
+        print("Apertou no botao")
+    }
+    lazy var contentView: UIView = {
+        let contentView = UIView()
+        
+        return contentView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.addSubview(contentView)
+        
         scrollView.delegate = self
         
         slides = createSlides()
@@ -61,13 +73,53 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     
     func setupSlideScrollView(slides : [Slide]) {
         
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: scrollView.frame.height)
+//        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: scrollView.frame.height)
+//        scrollView.isPagingEnabled = true
+//
+//        for i in 0 ..< slides.count {
+//            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: scrollView.frame.height)
+//            scrollView.addSubview(slides[i])
+//        }
+//
+//
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.leftAnchor.constraint(equalTo: self.scrollView.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: self.scrollView.rightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor),
+            contentView.topAnchor.constraint(equalTo: self.scrollView.topAnchor)
+        ])
+        
         scrollView.isPagingEnabled = true
         
-        for i in 0 ..< slides.count {
-            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: scrollView.frame.height)
-            scrollView.addSubview(slides[i])
+        var lastSlide: Slide?
+        for i in 0..<slides.count {
+
+            let currentSlide = slides[i]
+            contentView.addSubview(currentSlide)
+            currentSlide.translatesAutoresizingMaskIntoConstraints = false
+            
+            if let lastSlide = lastSlide {
+                currentSlide.leftAnchor.constraint(equalTo: lastSlide.rightAnchor).isActive = true
+            } else {
+                currentSlide.leftAnchor.constraint(equalTo: self.contentView.leftAnchor).isActive = true
+            }
+
+            currentSlide.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+
+            currentSlide.bottomAnchor.constraint(equalTo: pageControl.topAnchor).isActive = true
+            currentSlide.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+            
+            if i == slides.count - 1 {
+                currentSlide.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
+            }
+            //currentSlide.backgroundColor = UIColor.red
+            lastSlide = currentSlide
+            
+          
         }
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

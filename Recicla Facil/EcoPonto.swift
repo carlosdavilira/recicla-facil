@@ -22,6 +22,7 @@ class EcoPonto: Decodable {
         self.endereco = endereco
         self.bairro = bairro
         self.latitude = latitude
+        self.longitude = longitude
     }
     
 }
