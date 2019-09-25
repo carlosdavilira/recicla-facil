@@ -43,9 +43,24 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let localizacaoUsuario: CLLocation = locations.last!
         
+        let lat: CLLocationDegrees = localizacaoUsuario.coordinate.latitude
+        let lon: CLLocationDegrees = localizacaoUsuario.coordinate.longitude
         
+        let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat,lon)
+        
+        let deltaLatitude:CLLocationDegrees = 0.08
+        
+        let deltaLongitude: CLLocationDegrees = 0.08
+        
+        let areaVizualizacao = MKCoordinateSpan(latitudeDelta: deltaLatitude,longitudeDelta: deltaLongitude)
+        
+        let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: mapa.region.span)
+        
+        
+        mapa.setRegion(regiao, animated: true)
     }
     
     func plotarPontosMapa(listaEcopontos:[EcoPonto]){
@@ -55,9 +70,9 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             
             let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat,lon)
             
-            let deltaLatitude:CLLocationDegrees = 0.1
+            let deltaLatitude:CLLocationDegrees = 0.01
             
-            let deltaLongitude: CLLocationDegrees = 0.1
+            let deltaLongitude: CLLocationDegrees = 0.08
             
             let areaVizualizacao = MKCoordinateSpan(latitudeDelta: deltaLatitude,longitudeDelta: deltaLongitude)
             

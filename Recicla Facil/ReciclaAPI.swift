@@ -28,22 +28,7 @@ class ReciclaAPI {
                         print(ecoPontos)
                         
                         completionHandler(listaEcoPontosRetorno)
-                        
-//                        let listaEcoPontos = try JSONSerialization.jsonObject(with: dados!, options: []) as! [[String:Any]]
-//
-//                        for unidade in listaEcoPontos {
-//                            let  econPonto = EcoPonto.init(nome: unidade["nome"] as! String,
-//                                endereco: unidade["endereco"] as! String,
-//                                bairro: unidade["bairro"] as! String,
-//                                latitude: unidade["latitude"] as! Double,
-//                                longitude: unidade["longitude"] as! Double
-//                            )
-//                            listaEcoPontosRetorno.append(econPonto)
-//                        }
-                       
-                        
-                      //  guard let nomePonto = listaEcoPontos[0]["endereco"] as? String else { return }
-                        //print(nomePonto)
+                      
                     } catch{
                         print("Erro ao formatar retorno")
                     }
