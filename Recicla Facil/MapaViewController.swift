@@ -15,8 +15,13 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var mapa: MKMapView!
     var gerenciadorLocal = CLLocationManager()
     var ecoPontos:[EcoPonto] = []
+    var userRegiao:MKCoordinateRegion!
     
     
+    @IBAction func CentralizarMapa(_ sender: Any) {
+        mapa.setRegion(userRegiao, animated: true)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +62,9 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         let areaVizualizacao = MKCoordinateSpan(latitudeDelta: deltaLatitude,longitudeDelta: deltaLongitude)
         
-        let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: mapa.region.span)
         
+        let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: mapa.region.span)
+        userRegiao = MKCoordinateRegion(center: localizacao, span: areaVizualizacao)
         
         mapa.setRegion(regiao, animated: true)
     }

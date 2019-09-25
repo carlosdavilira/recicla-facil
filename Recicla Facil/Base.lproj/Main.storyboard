@@ -90,14 +90,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byR-u5-Vgt" userLabel="Pular">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byR-u5-Vgt" userLabel="Pular">
                                 <rect key="frame" x="114" y="779" width="186" height="42"/>
                                 <color key="backgroundColor" red="0.42352941176470588" green="0.87058823529411766" blue="0.71764705882352942" alpha="0.9532855308219178" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="VdT-5t-qb2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Pular ">
+                                <state key="normal" title="Próximo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -105,6 +105,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gJc-zq-nXg"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-qj-Qgz">
                                 <rect key="frame" x="0.0" y="104" width="414" height="580"/>
@@ -146,6 +149,7 @@
                         <viewLayoutGuide key="safeArea" id="UJz-RV-n1z"/>
                     </view>
                     <connections>
+                        <outlet property="btnProsseguir" destination="byR-u5-Vgt" id="crr-gb-TJz"/>
                         <outlet property="pageControl" destination="6eV-JB-0Rb" id="zwl-PL-gy9"/>
                         <outlet property="scrollView" destination="XFj-qj-Qgz" id="u3i-tQ-a3x"/>
                     </connections>
@@ -165,13 +169,33 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahV-Kb-yeO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQH-RL-9nh">
+                                <rect key="frame" x="33" y="769" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="5" height="0.0"/>
+                                <state key="normal" image="centralizar">
+                                    <color key="titleColor" red="0.933724463" green="0.92269223929999999" blue="0.85585165019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="CentralizarMapa:" destination="yoe-9g-wBj" eventType="touchUpInside" id="7oN-VW-Gap"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ahV-Kb-yeO" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" id="DS1-DD-qnC"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="nQH-RL-9nh" secondAttribute="bottom" constant="33" id="J4l-In-wwo"/>
                             <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="ahV-Kb-yeO" secondAttribute="trailing" id="PZn-Wt-3R7"/>
                             <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="ahV-Kb-yeO" secondAttribute="bottom" id="SRj-1A-g9j"/>
+                            <constraint firstItem="nQH-RL-9nh" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" constant="33" id="Sgi-ez-tQK"/>
                             <constraint firstItem="ahV-Kb-yeO" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" id="a6a-4O-qRD"/>
+                            <constraint firstItem="nQH-RL-9nh" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" constant="725" id="bRr-rm-Nup"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="nQH-RL-9nh" secondAttribute="trailing" constant="321" id="dYt-Nt-hgt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7gt-Jx-BvN"/>
                     </view>
@@ -282,6 +306,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="centralizar" width="50" height="50"/>
         <image name="direction3" width="428.66665649414062" height="296.66665649414062"/>
     </resources>
     <inferredMetricsTieBreakers>

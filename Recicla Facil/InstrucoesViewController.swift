@@ -17,6 +17,9 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     @IBAction func ChamarSkip(_ sender: Any) {
         print("Apertou no botao")
     }
+    
+    @IBOutlet weak var btnProsseguir: UIButton!
+    
     lazy var contentView: UIView = {
         let contentView = UIView()
         
@@ -25,6 +28,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnProsseguir.isHidden = true
         
         scrollView.addSubview(contentView)
         
@@ -95,7 +99,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
         
         var lastSlide: Slide?
         for i in 0..<slides.count {
-
+            
             let currentSlide = slides[i]
             contentView.addSubview(currentSlide)
             currentSlide.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +117,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
             
             if i == slides.count - 1 {
                 currentSlide.rightAnchor.constraint(equalTo: self.contentView.rightAnchor).isActive = true
+               
             }
             //currentSlide.backgroundColor = UIColor.red
             lastSlide = currentSlide
@@ -147,7 +152,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
          * below code scales the imageview on paging the scrollview
          */
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
-        
+        btnProsseguir.isHidden = true
         if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
             
             slides[0].imageView.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
@@ -164,6 +169,7 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
         } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
             slides[3].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
             slides[4].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
+             btnProsseguir.isHidden = false
         }
     }
     
