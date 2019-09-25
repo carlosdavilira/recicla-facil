@@ -27,7 +27,7 @@ class ViewController: UIViewController {
               performSegue(withIdentifier: "semTutorial", sender: nil)
         }
         else if(labelLogin.text == "naoregistrado"){
-              performSegue(withIdentifier: "comTutorial", sender: nil)
+             // performSegue(withIdentifier: "comTutorial", sender: nil)
         }
         
     }
