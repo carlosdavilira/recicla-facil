@@ -42,6 +42,12 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let localizacaoUsuario: CLLocation = locations.last!
+        
+        
+    }
+    
     func plotarPontosMapa(listaEcopontos:[EcoPonto]){
         for ecoPonto in listaEcopontos {
             let lat: CLLocationDegrees = ecoPonto.latitude
