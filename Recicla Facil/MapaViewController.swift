@@ -111,6 +111,10 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.filtros.append(Filtro.init(nome: "Madeira", valor: true))
         self.filtros.append(Filtro.init(nome: "Celulares", valor: true))
         self.filtros.append(Filtro.init(nome: "Plasticos", valor: true))
+        self.filtros.append(Filtro.init(nome: "Pilhas e baterias", valor: true))
+        self.filtros.append(Filtro.init(nome: "Móveis", valor: true))
+        self.filtros.append(Filtro.init(nome: "Entulho", valor: true))
+        self.filtros.append(Filtro.init(nome: "Vidro", valor: true))
     }
     func UIPersonalize(){
         // Shadow and Radius

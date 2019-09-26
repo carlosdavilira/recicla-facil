@@ -48,29 +48,29 @@ class InstrucoesViewController: UIViewController,UIScrollViewDelegate {
         
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide1.imageView.image = UIImage(named: "delivery")
-        slide1.labelTitulo.text = "A real-life bear"
-        slide1.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide1.labelTitulo.text = "Separe seu lixo"
+        slide1.labelOutroTexto.text = "Separe seu lixo reciclável para realizar um descarte futuro"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide2.imageView.image = UIImage(named: "destination1")
-        slide2.labelTitulo.text = "A real-life bear"
-        slide2.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide2.labelTitulo.text = "Saiba onde encontrar"
+        slide2.labelOutroTexto.text = "Localize um ponto no mapa para realizar o seu descarte"
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide3.imageView.image = UIImage(named: "winners")
-        slide3.labelTitulo.text = "A real-life bear"
-        slide3.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide3.labelTitulo.text = "Receba recompensas"
+        slide3.labelOutroTexto.text = "Acumule pontos com as entidades parceiras"
         
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide4.imageView.image = UIImage(named: "points")
-        slide4.labelTitulo.text = "A real-life bear"
-        slide4.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide4.labelTitulo.text = "Recompensas"
+        slide4.labelOutroTexto.text = "Utilize seus pontos para obter recompensas em lojas parceiras dos ecopontos"
         
         
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide5.imageView.image = UIImage(named: "celebration2")
-        slide5.labelTitulo.text = "A real-life bear"
-        slide5.labelOutroTexto.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        slide5.labelTitulo.text = "Gratificação"
+        slide5.labelOutroTexto.text = "Tenha a satisfação de estar contribuindo para um mundo melhor"
         
         return [slide1, slide2, slide3, slide4, slide5]
     }
