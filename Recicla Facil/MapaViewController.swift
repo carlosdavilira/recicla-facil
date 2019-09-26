@@ -16,6 +16,14 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var gerenciadorLocal = CLLocationManager()
     var ecoPontos:[EcoPonto] = []
     var userRegiao:MKCoordinateRegion!
+    @IBOutlet weak var tableView: UITableView!
+    var filtros:[Filtro] = []
+    
+    @IBOutlet weak var refButtonCentralizar: UIButton!
+    
+    @IBAction func ChamarFiltros(_ sender: Any) {
+        tableView.isHidden = !(tableView.isHidden)
+    }
     
     
     @IBAction func CentralizarMapa(_ sender: Any) {
@@ -25,8 +33,10 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        CriacaoFiltros()
+        UIPersonalize()
         
+        tableView.isHidden = true
         gerenciadorLocal.delegate = self
         gerenciadorLocal.desiredAccuracy = kCLLocationAccuracyBest
         gerenciadorLocal.requestWhenInUseAuthorization()
@@ -95,7 +105,45 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
     }
 
+    func CriacaoFiltros(){
+        self.filtros.append(Filtro.init(nome: "Metal", valor: true))
+        self.filtros.append(Filtro.init(nome: "Eletronico", valor: true))
+        self.filtros.append(Filtro.init(nome: "Madeira", valor: true))
+        self.filtros.append(Filtro.init(nome: "Celulares", valor: true))
+        self.filtros.append(Filtro.init(nome: "Plasticos", valor: true))
+    }
+    func UIPersonalize(){
+        // Shadow and Radius
+        refButtonCentralizar.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        refButtonCentralizar.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        refButtonCentralizar.layer.shadowOpacity = 1.0
+        refButtonCentralizar.layer.shadowRadius = 0.0
+        refButtonCentralizar.layer.masksToBounds = false
+       
+    }
 
 }
+
+
+extension MapaViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filtros.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var filtro = filtros[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell", for: indexPath) as! FiltroTableViewCell
+        
+        cell.nomeFiltro.text = filtro.nome
+        cell.valor.isOn = filtro.valor
+        
+        return cell
+    }
+    
+    
+    
+    
+}
+
 
 

@@ -143,7 +143,7 @@
                                 <rect key="frame" x="40" y="503" width="334" height="48"/>
                                 <color key="backgroundColor" red="0.21993666889999999" green="0.82800608870000003" blue="0.62322348360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Criar Conta">
+                                <state key="normal" title="Continuar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -268,45 +268,117 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahV-Kb-yeO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQH-RL-9nh">
                                 <rect key="frame" x="33" y="769" width="60" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nQH-RL-9nh" secondAttribute="height" multiplier="1:1" id="hyX-k8-9fZ"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="5" height="0.0"/>
                                 <state key="normal" image="centralizar">
                                     <color key="titleColor" red="0.933724463" green="0.92269223929999999" blue="0.85585165019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="CentralizarMapa:" destination="yoe-9g-wBj" eventType="touchUpInside" id="7oN-VW-Gap"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-Ia-xGU">
+                                <rect key="frame" x="20" y="202" width="374" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="filterCell" rowHeight="92" id="GEq-jQ-ibO" customClass="FiltroTableViewCell" customModule="Recicla_Facil" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GEq-jQ-ibO" id="Nc1-rM-i6H">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW2-ah-SBW">
+                                                    <rect key="frame" x="30" y="21" width="52" height="50"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xFC-z3-Nj4">
+                                                    <rect key="frame" x="295" y="30.5" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xFC-z3-Nj4" secondAttribute="trailing" constant="10" id="064-DV-mba"/>
+                                                <constraint firstItem="WW2-ah-SBW" firstAttribute="top" secondItem="Nc1-rM-i6H" secondAttribute="topMargin" constant="10" id="4oZ-a0-Pjm"/>
+                                                <constraint firstItem="xFC-z3-Nj4" firstAttribute="centerY" secondItem="WW2-ah-SBW" secondAttribute="centerY" id="RZw-Ba-d1a"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WW2-ah-SBW" secondAttribute="bottom" constant="10" id="Rra-K4-27K"/>
+                                                <constraint firstItem="xFC-z3-Nj4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WW2-ah-SBW" secondAttribute="trailing" constant="10" id="bgV-Ic-ZcZ"/>
+                                                <constraint firstItem="WW2-ah-SBW" firstAttribute="leading" secondItem="Nc1-rM-i6H" secondAttribute="leadingMargin" constant="10" id="gYj-8c-hds"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nomeFiltro" destination="WW2-ah-SBW" id="H4d-Xc-uZJ"/>
+                                            <outlet property="valor" destination="xFC-z3-Nj4" id="gWW-1o-itC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yoe-9g-wBj" id="aEd-Cc-kKE"/>
+                                    <outlet property="delegate" destination="yoe-9g-wBj" id="NoK-MZ-8BS"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-pc-ZLB">
+                                <rect key="frame" x="382" y="54" width="22" height="22"/>
+                                <state key="normal" image="filter"/>
+                                <connections>
+                                    <action selector="ChamarFiltros:" destination="yoe-9g-wBj" eventType="touchUpInside" id="zNY-mi-4wu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locais para descarte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp1-Jx-2a7">
+                                <rect key="frame" x="122" y="51" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ahV-Kb-yeO" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" id="DS1-DD-qnC"/>
+                            <constraint firstItem="Qhk-Ia-xGU" firstAttribute="centerY" secondItem="7gt-Jx-BvN" secondAttribute="centerY" id="82s-c1-7jP"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="KXj-pc-ZLB" secondAttribute="trailing" constant="10" id="D4Y-lA-oBk"/>
+                            <constraint firstItem="Lp1-Jx-2a7" firstAttribute="centerX" secondItem="7gt-Jx-BvN" secondAttribute="centerX" id="DCb-xh-rs4"/>
                             <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="nQH-RL-9nh" secondAttribute="bottom" constant="33" id="J4l-In-wwo"/>
                             <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="ahV-Kb-yeO" secondAttribute="trailing" id="PZn-Wt-3R7"/>
                             <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="ahV-Kb-yeO" secondAttribute="bottom" id="SRj-1A-g9j"/>
                             <constraint firstItem="nQH-RL-9nh" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" constant="33" id="Sgi-ez-tQK"/>
+                            <constraint firstItem="Qhk-Ia-xGU" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" constant="20" id="XWr-w8-Ov7"/>
                             <constraint firstItem="ahV-Kb-yeO" firstAttribute="leading" secondItem="7gt-Jx-BvN" secondAttribute="leading" id="a6a-4O-qRD"/>
-                            <constraint firstItem="nQH-RL-9nh" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" constant="725" id="bRr-rm-Nup"/>
-                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="nQH-RL-9nh" secondAttribute="trailing" constant="321" id="dYt-Nt-hgt"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="bottom" secondItem="Qhk-Ia-xGU" secondAttribute="bottom" constant="158" id="bjc-Ud-MQy"/>
+                            <constraint firstItem="ahV-Kb-yeO" firstAttribute="top" secondItem="KXj-pc-ZLB" secondAttribute="bottom" constant="8" id="d5i-Ar-34h"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="nQH-RL-9nh" secondAttribute="trailing" constant="321" id="dYt-Nt-hgt"/>
+                            <constraint firstItem="Qhk-Ia-xGU" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" constant="158" id="f4Y-9f-5G5"/>
+                            <constraint firstItem="KXj-pc-ZLB" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" constant="10" id="ju6-LR-heF"/>
+                            <constraint firstItem="7gt-Jx-BvN" firstAttribute="trailing" secondItem="Qhk-Ia-xGU" secondAttribute="trailing" constant="20" id="mNL-GV-uIX"/>
+                            <constraint firstItem="Lp1-Jx-2a7" firstAttribute="top" secondItem="7gt-Jx-BvN" secondAttribute="top" constant="7" id="zkS-pI-2B6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7gt-Jx-BvN"/>
                     </view>
                     <connections>
                         <outlet property="mapa" destination="ahV-Kb-yeO" id="c8i-bf-K8Q"/>
+                        <outlet property="refButtonCentralizar" destination="nQH-RL-9nh" id="5IW-Pe-5vJ"/>
+                        <outlet property="tableView" destination="Qhk-Ia-xGU" id="JpC-qm-dvp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Her-pV-mKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="846"/>
+            <point key="canvasLocation" x="2227.536231884058" y="845.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S1P-Bs-TIv">
@@ -409,6 +481,7 @@
     <resources>
         <image name="centralizar" width="50" height="50"/>
         <image name="direction3" width="428.66665649414062" height="296.66665649414062"/>
+        <image name="filter" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9O2-c0-PsG"/>

@@ -22,6 +22,8 @@
 		57B81B01232984B100C4EBB9 /* Recicla_Facil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57B81AFF232984B100C4EBB9 /* Recicla_Facil.xcdatamodeld */; };
 		57B81B03232984B400C4EBB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B81B02232984B400C4EBB9 /* Assets.xcassets */; };
 		57B81B06232984B400C4EBB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B81B04232984B400C4EBB9 /* LaunchScreen.storyboard */; };
+		57C9A9A8233D38FE00D99F9D /* Filtro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C9A9A7233D38FE00D99F9D /* Filtro.swift */; };
+		57C9A9AA233D47CE00D99F9D /* FiltroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C9A9A9233D47CE00D99F9D /* FiltroTableViewCell.swift */; };
 		57EE82F4233BE42B00E75497 /* Acesso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE82F3233BE42B00E75497 /* Acesso.swift */; };
 		57EE82F6233C088600E75497 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE82F5233C088600E75497 /* CadastroViewController.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		57B81B02232984B400C4EBB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B81B05232984B400C4EBB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B81B07232984B400C4EBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C9A9A7233D38FE00D99F9D /* Filtro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filtro.swift; sourceTree = "<group>"; };
+		57C9A9A9233D47CE00D99F9D /* FiltroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroTableViewCell.swift; sourceTree = "<group>"; };
 		57EE82F3233BE42B00E75497 /* Acesso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acesso.swift; sourceTree = "<group>"; };
 		57EE82F5233C088600E75497 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,8 @@
 				5740B3F42339391A00A9C44D /* Slide.xib */,
 				57EE82F3233BE42B00E75497 /* Acesso.swift */,
 				57EE82F5233C088600E75497 /* CadastroViewController.swift */,
+				57C9A9A7233D38FE00D99F9D /* Filtro.swift */,
+				57C9A9A9233D47CE00D99F9D /* FiltroTableViewCell.swift */,
 			);
 			path = "Recicla Facil";
 			sourceTree = "<group>";
@@ -183,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C9A9A8233D38FE00D99F9D /* Filtro.swift in Sources */,
 				5789F2802332BB6F0016FC56 /* ReciclaAPI.swift in Sources */,
 				5740B3F1233934CF00A9C44D /* InstrucoesViewController.swift in Sources */,
 				5789F27B2332A8DF0016FC56 /* EcoPonto.swift in Sources */,
 				5789F275233176530016FC56 /* Usuario.swift in Sources */,
+				57C9A9AA233D47CE00D99F9D /* FiltroTableViewCell.swift in Sources */,
 				57EE82F4233BE42B00E75497 /* Acesso.swift in Sources */,
 				5789F27923329ED10016FC56 /* MapaViewController.swift in Sources */,
 				57B81AFB232984B100C4EBB9 /* ViewController.swift in Sources */,
