@@ -161,7 +161,7 @@
                                 <rect key="frame" x="10" y="44" width="41" height="30"/>
                                 <state key="normal" title="Voltar"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="AcV-xL-Ahm"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="d74-KN-9wb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shc-Hx-Eqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="112.5"/>
+            <point key="canvasLocation" x="2414" y="23"/>
         </scene>
         <!--Instrucoes View Controller-->
         <scene sceneID="w2e-fV-V8J">
@@ -373,7 +373,7 @@
                                 <state key="normal" title="Sair"/>
                                 <connections>
                                     <action selector="Logout:" destination="yoe-9g-wBj" eventType="touchUpInside" id="f2m-jl-Qwq"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutIdentifier" id="bIc-QT-SXQ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="logOutIdentifier" id="85b-Qo-Wlq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -515,6 +515,6 @@
         <image name="go-to-location" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bIc-QT-SXQ"/>
+        <segue reference="85b-Qo-Wlq"/>
     </inferredMetricsTieBreakers>
 </document>

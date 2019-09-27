@@ -24,7 +24,21 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBAction func Logout(_ sender: Any) {
         
       
-        performSegue(withIdentifier: "logOutIdentifier", sender: nil)
+        
+        let refreshAlert = UIAlertController(title: "Confirmação", message: "Deseja realmente sair?", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            
+            self.performSegue(withIdentifier: "logOutIdentifier", sender: nil)
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: { (action: UIAlertAction!) in
+           // print("Handle Cancel Logic here")
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+        
+        //performSegue(withIdentifier: "logOutIdentifier", sender: nil)
         
         
     }
