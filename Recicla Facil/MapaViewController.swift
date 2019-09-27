@@ -21,6 +21,16 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @IBOutlet weak var refButtonCentralizar: UIButton!
     
+    @IBAction func Logout(_ sender: Any) {
+        
+      
+        performSegue(withIdentifier: "logOutIdentifier", sender: nil)
+        
+        
+    }
+    
+
+    
     @IBAction func ChamarFiltros(_ sender: Any) {
         tableView.isHidden = !(tableView.isHidden)
     }
@@ -50,9 +60,6 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             }
         }
         
-      
-        //TODO Ecopontos ainda nao plotam corretamente. necessario ver se o array esta sendo preenchido corretamente
-       
       
         
     }

@@ -30,7 +30,7 @@ class Acesso {
         
         if listaUsuarios.isEmpty {
             //primeiro acesso sem nenhum usuario
-            var user: Usuario = Usuario.init(id:self.email,primeiroAcesso:true)
+            var user: Usuario = Usuario.init(id:self.email,primeiroAcesso:true,email:"",senha:"")
             print("Nenhum usuario registrado")
             return false
         }

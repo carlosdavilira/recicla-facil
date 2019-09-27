@@ -24,12 +24,34 @@ class ViewController: UIViewController {
         // -3.738000, -38.519733
         
         if(labelLogin.text == "registrado"){
-              performSegue(withIdentifier: "semTutorial", sender: nil)
+            performSegue(withIdentifier: "semTutorial", sender: nil)
         }
-        else if(labelLogin.text == "naoregistrado"){
-             // performSegue(withIdentifier: "comTutorial", sender: nil)
+            
+         else if(verificarUsuario(usuario: labelLogin.text!, senha: labelSenha.text!)){
+            performSegue(withIdentifier: "semTutorial", sender: nil)
+        }
+        else{
+            mostrarMesagem(titulo:"Aviso",mensagem:"Usuário ou senha incorretos!")
         }
         
+    }
+    
+    func verificarUsuario(usuario:String,senha:String) -> Bool {
+        var usuarios:[Usuario] = UserDefaults.standard.object(forKey: "usuarios") as! [Usuario]
+        for userr in usuarios {
+            if(userr.email == labelLogin.text) && (userr.senha == labelSenha.text){
+                return true
+            }
+        }
+        return false
+    }
+    
+    func mostrarMesagem(titulo:String,mensagem:String){
+        let alertController = UIAlertController(title: titulo, message:
+            mensagem, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     
